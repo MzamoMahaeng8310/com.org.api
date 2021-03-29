@@ -1,0 +1,232 @@
+{
+   "Workstation" :{
+  "users": [
+    {
+      "userId": 1,
+      "firstName": "Krish",
+      "lastName": "Lee",
+      "phoneNumber": "123456",
+     "price": "10",
+      "emailAddress": "krish.lee@learningcontainer.com"
+    },
+    {
+      "userId": 2,
+      "firstName": "racks",
+      "lastName": "jacson",
+      "phoneNumber": "123456",
+      "price": "6",
+      "emailAddress": "racks.jacson@learningcontainer.com"
+    },
+    {
+      "userId": 3,
+      "firstName": "denial",
+      "lastName": "roast",
+      "phoneNumber": "33333333",
+ "price": "29",
+      "emailAddress": "denial.roast@learningcontainer.com"
+    },
+    {
+      "userId": 4,
+      "firstName": "devid",
+      "lastName": "neo",
+      "phoneNumber": "222222222",
+ "price": "120",
+       "address"   :  "13B Greenway Street",
+      "emailAddress": "devid.neo@learningcontainer.com"
+    },
+    {
+      "userId": 5,
+      "firstName": "jone",
+      "lastName": "mac",
+      "phoneNumber": "111111111",
+ "price": "45",
+       "address":"16 Rose avenue",
+      "emailAddress": "jone.mac@learningcontainer.com"
+    }
+  ]
+  }
+}
+1. Return all the email address : $..emailAddress 
+or  $.Workstation.users[*].emailAddress
+
+
+2. return the first item in the array for lastname "lee"
+$.Workstation.users[0].lastName
+
+Get the emaill address for user 4   "emailAddress": "devid.neo@learningcontainer.com"
+$.Workstation.users[3].emailAddress
+
+Return all the details for user id 1
+$.Workstation.users[0]
+
+Find  the first 2 users 
+$.Workstation.users[0,1]  -- so this is a set in the index
+
+return all the users after the first userid 1
+$.Workstation.users[1:]     - so th way to read this is to day return all the "elements after" so here i return all the elements after 1 
+
+so e.g all the userid's starting from second or after second
+$.Workstation.users[2:]
+[
+	{
+		"userId": 3,
+		"firstName": "denial",
+		"lastName": "roast",
+		"phoneNumber": "33333333",
+		"emailAddress": "denial.roast@learningcontainer.com"
+	},
+	{
+		"userId": 4,
+		"firstName": "devid",
+		"lastName": "neo",
+		"phoneNumber": "222222222",
+		"emailAddress": "devid.neo@learningcontainer.com"
+	},
+	{
+		"userId": 5,
+		"firstName": "jone",
+		"lastName": "mac",
+		"phoneNumber": "111111111",
+		"emailAddress": "jone.mac@learningcontainer.com"
+	}
+]
+
+
+The so the last user id in the list. so from the bottom up.
+$.Workstation.users[-1:]
+[
+	{
+		"userId": 5,
+		"firstName": "jone",
+		"lastName": "mac",
+		"phoneNumber": "111111111",
+		"emailAddress": "jone.mac@learningcontainer.com"
+	}
+]
+So the last element 
+
+so from the bottom up the last 2 elements upwards
+[
+	{
+		"userId": 4,
+		"firstName": "devid",
+		"lastName": "neo",
+		"phoneNumber": "222222222",
+		"emailAddress": "devid.neo@learningcontainer.com"
+	},
+	{
+		"userId": 5,
+		"firstName": "jone",
+		"lastName": "mac",
+		"phoneNumber": "111111111",
+		"emailAddress": "jone.mac@learningcontainer.com"
+	}
+]
+
+
+So lets say you want to query or filter. In this case I want all the array elements with the address in their userid.
+
+$.Workstation.users[?(@.address)]
+So the ?() is used.
+the @. means all the elements in that array. in this case all the elements in the userid array.
+where you have an address. 
+response
+[
+	{
+		"userId": 4,
+		"firstName": "devid",
+		"lastName": "neo",
+		"phoneNumber": "222222222",
+		"address": "13B Greenway Street",
+		"emailAddress": "devid.neo@learningcontainer.com"
+	},
+	{
+		"userId": 5,
+		"firstName": "jone",
+		"lastName": "mac",
+		"phoneNumber": "111111111",
+		"address": "16 Rose avenue",
+		"emailAddress": "jone.mac@learningcontainer.com"
+	}
+]
+
+
+Search for all the userid elements where the address is "16 Rose Avenue"
+
+$.Workstation.users[?(@.address="16 Rose avenue")]
+[
+   {
+      "userId":5,
+      "firstName":"jone",
+      "lastName":"mac",
+      "phoneNumber":"111111111",
+      "address":"16 Rose avenue",
+      "emailAddress":"jone.mac@learningcontainer.com"
+   }
+]
+
+Search for all the elements where the phone number is 123456. I have 2 of these 
+$.Workstation.users[?(@.phoneNumber="123456")]
+[
+   {
+      "userId":1,
+      "firstName":"Krish",
+      "lastName":"Lee",
+      "phoneNumber":"123456",
+      "emailAddress":"krish.lee@learningcontainer.com"
+   },
+   {
+      "userId":2,
+      "firstName":"racks",
+      "lastName":"jacson",
+      "phoneNumber":"123456",
+      "emailAddress":"racks.jacson@learningcontainer.com"
+   }
+]
+
+
+Return all the user id where the price is greater than 10
+$.Workstation.users[?(@.price>10)]
+
+[
+   {
+      "userId":3,
+      "firstName":"denial",
+      "lastName":"roast",
+      "phoneNumber":"33333333",
+      "price":"29",
+      "emailAddress":"denial.roast@learningcontainer.com"
+   },
+   {
+      "userId":4,
+      "firstName":"devid",
+      "lastName":"neo",
+      "phoneNumber":"222222222",
+      "price":"120",
+      "address":"13B Greenway Street",
+      "emailAddress":"devid.neo@learningcontainer.com"
+   },
+   {
+      "userId":5,
+      "firstName":"jone",
+      "lastName":"mac",
+      "phoneNumber":"111111111",
+      "price":"45",
+      "address":"16 Rose avenue",
+      "emailAddress":"jone.mac@learningcontainer.com"
+   }
+]
+
+
+retun the elements where the lastname is roast
+$.Workstation.users[?(@.lastName="roast")]
+[
+   {
+      "userId":3,
+      "firstName":"denial",
+      "lastName":"roast",
+      "phoneNumber":"33333333",
+      "price":"29",
+      "emailAddress":"denial.roast@learningcontainer.com"
+   }
+]

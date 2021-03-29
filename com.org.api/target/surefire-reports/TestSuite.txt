@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 20, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.938 s <<< FAILURE! - in TestSuite
+APIProject.com.org.api.WebsocketsAutomation.LEADCALLED  Time elapsed: 0.008 s  <<< FAILURE!
+java.io.FileNotFoundException: C:\test\LEADCALLED.txt (The system cannot find the file specified)
+	at APIProject.com.org.api.WebsocketsAutomation.LEADCALLED(WebsocketsAutomation.java:1123)
+
