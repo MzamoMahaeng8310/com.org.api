@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6683" started-at="2021-03-30T00:18:41 CAT" finished-at="2021-03-30T00:18:48 CAT">
+  <suite name="Default suite" duration-ms="6151" started-at="2021-03-30T15:22:31 CAT" finished-at="2021-03-30T15:22:37 CAT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6683" started-at="2021-03-30T00:18:41 CAT" finished-at="2021-03-30T00:18:48 CAT">
+    <test name="Default test" duration-ms="6151" started-at="2021-03-30T15:22:31 CAT" finished-at="2021-03-30T15:22:37 CAT">
       <class name="APIProject.com.org.api.WeatherMaps">
-        <test-method status="PASS" signature="extentReportBeforeExecution()[pri:0, instance:APIProject.com.org.api.WeatherMaps@704a52ec]" name="extentReportBeforeExecution" is-config="true" duration-ms="238" started-at="2021-03-30T00:18:41 CAT" finished-at="2021-03-30T00:18:41 CAT">
+        <test-method status="PASS" signature="extentReportBeforeExecution()[pri:0, instance:APIProject.com.org.api.WeatherMaps@704a52ec]" name="extentReportBeforeExecution" is-config="true" duration-ms="222" started-at="2021-03-30T15:22:30 CAT" finished-at="2021-03-30T15:22:31 CAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentReportBeforeExecution -->
-        <test-method status="PASS" signature="Transfering_api_reponse_to_other_api_17Lesson()[pri:0, instance:APIProject.com.org.api.WeatherMaps@704a52ec]" name="Transfering_api_reponse_to_other_api_17Lesson" duration-ms="6622" started-at="2021-03-30T00:18:41 CAT" finished-at="2021-03-30T00:18:48 CAT">
+        <test-method status="PASS" signature="Transfering_api_reponse_to_other_api_17Lesson()[pri:0, instance:APIProject.com.org.api.WeatherMaps@704a52ec]" name="Transfering_api_reponse_to_other_api_17Lesson" duration-ms="6093" started-at="2021-03-30T15:22:31 CAT" finished-at="2021-03-30T15:22:37 CAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Transfering_api_reponse_to_other_api_17Lesson -->
-        <test-method status="PASS" signature="ExtentFlush()[pri:0, instance:APIProject.com.org.api.WeatherMaps@704a52ec]" name="ExtentFlush" is-config="true" duration-ms="651" started-at="2021-03-30T00:18:48 CAT" finished-at="2021-03-30T00:18:49 CAT">
+        <test-method status="PASS" signature="ExtentFlush()[pri:0, instance:APIProject.com.org.api.WeatherMaps@704a52ec]" name="ExtentFlush" is-config="true" duration-ms="604" started-at="2021-03-30T15:22:37 CAT" finished-at="2021-03-30T15:22:37 CAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ExtentFlush -->
