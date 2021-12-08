@@ -1,25 +1,267 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6151" started-at="2021-03-30T15:22:31 CAT" finished-at="2021-03-30T15:22:37 CAT">
+  <suite name="Default suite" duration-ms="8496" started-at="2021-11-19T19:38:31 CAT" finished-at="2021-11-19T19:38:40 CAT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6151" started-at="2021-03-30T15:22:31 CAT" finished-at="2021-03-30T15:22:37 CAT">
-      <class name="APIProject.com.org.api.WeatherMaps">
-        <test-method status="PASS" signature="extentReportBeforeExecution()[pri:0, instance:APIProject.com.org.api.WeatherMaps@704a52ec]" name="extentReportBeforeExecution" is-config="true" duration-ms="222" started-at="2021-03-30T15:22:30 CAT" finished-at="2021-03-30T15:22:31 CAT">
+    <test name="Default test" duration-ms="8496" started-at="2021-11-19T19:38:31 CAT" finished-at="2021-11-19T19:38:40 CAT">
+      <class name="APIProject.com.org.api.FSPAquisitionPartyGET">
+        <test-method status="PASS" signature="preconditinDeclarations()[pri:0, instance:APIProject.com.org.api.FSPAquisitionPartyGET@704a52ec]" name="preconditinDeclarations" is-config="true" duration-ms="1675" started-at="2021-11-19T19:38:30 CAT" finished-at="2021-11-19T19:38:31 CAT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- extentReportBeforeExecution -->
-        <test-method status="PASS" signature="Transfering_api_reponse_to_other_api_17Lesson()[pri:0, instance:APIProject.com.org.api.WeatherMaps@704a52ec]" name="Transfering_api_reponse_to_other_api_17Lesson" duration-ms="6093" started-at="2021-03-30T15:22:31 CAT" finished-at="2021-03-30T15:22:37 CAT">
+        </test-method> <!-- preconditinDeclarations -->
+        <test-method status="FAIL" signature="FSPAquisiontGETRequest()[pri:0, instance:APIProject.com.org.api.FSPAquisitionPartyGET@704a52ec]" name="FSPAquisiontGETRequest" duration-ms="8216" started-at="2021-11-19T19:38:31 CAT" finished-at="2021-11-19T19:38:40 CAT">
+          <exception class="java.net.UnknownHostException">
+            <message>
+              <![CDATA[glcapi-ws-ppe.sanlam.co.za]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.net.UnknownHostException: glcapi-ws-ppe.sanlam.co.za
+at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+at java.net.InetAddress.getAllByName0(Unknown Source)
+at java.net.InetAddress.getAllByName(Unknown Source)
+at java.net.InetAddress.getAllByName(Unknown Source)
+at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:882)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+at org.apache.http.client.HttpClient$execute$0.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+at com.jayway.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder.doRequest(RequestSpecificationImpl.groovy:1974)
+at com.jayway.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:492)
+at com.jayway.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:441)
+at com.jayway.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:141)
+at com.jayway.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1396)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1210)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1019)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:810)
+at com.jayway.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+at com.jayway.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1178)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1210)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1019)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:810)
+at com.jayway.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:149)
+at com.jayway.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+at com.jayway.restassured.filter.Filter$filter$0.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+at com.jayway.restassured.filter.Filter$filter.call(Unknown Source)
+at com.jayway.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+at com.jayway.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+at com.jayway.restassured.filter.Filter$filter.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:141)
+at com.jayway.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+at com.jayway.restassured.filter.FilterContext$next.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+at com.jayway.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1596)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1210)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1019)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:810)
+at com.jayway.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+at com.jayway.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:160)
+at com.jayway.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+at APIProject.com.org.api.FSPAquisitionPartyGET.FSPAquisiontGETRequest(FSPAquisitionPartyGET.java:65)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.net.UnknownHostException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Transfering_api_reponse_to_other_api_17Lesson -->
-        <test-method status="PASS" signature="ExtentFlush()[pri:0, instance:APIProject.com.org.api.WeatherMaps@704a52ec]" name="ExtentFlush" is-config="true" duration-ms="604" started-at="2021-03-30T15:22:37 CAT" finished-at="2021-03-30T15:22:37 CAT">
+        </test-method> <!-- FSPAquisiontGETRequest -->
+        <test-method status="FAIL" signature="partytypes()[pri:0, instance:APIProject.com.org.api.FSPAquisitionPartyGET@704a52ec]" name="partytypes" duration-ms="131" started-at="2021-11-19T19:38:40 CAT" finished-at="2021-11-19T19:38:40 CAT">
+          <exception class="java.net.UnknownHostException">
+            <message>
+              <![CDATA[glcapi-ws-tst.sanlam.co.za]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.net.UnknownHostException: glcapi-ws-tst.sanlam.co.za
+at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+at java.net.InetAddress.getAllByName0(Unknown Source)
+at java.net.InetAddress.getAllByName(Unknown Source)
+at java.net.InetAddress.getAllByName(Unknown Source)
+at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:882)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+at org.apache.http.client.HttpClient$execute$0.call(Unknown Source)
+at com.jayway.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder.doRequest(RequestSpecificationImpl.groovy:1974)
+at com.jayway.restassured.internal.http.HTTPBuilder.doRequest(HTTPBuilder.java:492)
+at com.jayway.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:441)
+at com.jayway.restassured.internal.http.HTTPBuilder$request$2.call(Unknown Source)
+at com.jayway.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1396)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1210)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1019)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:810)
+at com.jayway.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)
+at com.jayway.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1178)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1210)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1019)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:810)
+at com.jayway.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:149)
+at com.jayway.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+at com.jayway.restassured.filter.Filter$filter$0.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+at com.jayway.restassured.filter.Filter$filter.call(Unknown Source)
+at com.jayway.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+at com.jayway.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+at com.jayway.restassured.filter.Filter$filter.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+at com.jayway.restassured.filter.Filter$filter$0.call(Unknown Source)
+at com.jayway.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:73)
+at com.jayway.restassured.filter.FilterContext$next.call(Unknown Source)
+at com.jayway.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1596)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1210)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1019)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:810)
+at com.jayway.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:48)
+at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:58)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:182)
+at com.jayway.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:160)
+at com.jayway.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+at APIProject.com.org.api.FSPAquisitionPartyGET.partytypes(FSPAquisitionPartyGET.java:107)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.net.UnknownHostException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ExtentFlush -->
-      </class> <!-- APIProject.com.org.api.WeatherMaps -->
+        </test-method> <!-- partytypes -->
+        <test-method status="PASS" signature="postScriptDeclarations()[pri:0, instance:APIProject.com.org.api.FSPAquisitionPartyGET@704a52ec]" name="postScriptDeclarations" is-config="true" duration-ms="0" started-at="2021-11-19T19:38:40 CAT" finished-at="2021-11-19T19:38:40 CAT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postScriptDeclarations -->
+      </class> <!-- APIProject.com.org.api.FSPAquisitionPartyGET -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -4,6 +4,9 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="APIProject.com.org.api.WebsocketsAutomation">
+				<methods>
+					<include name="GETALLCLIENTS2"></include>
+				</methods>
 			</class>
 		</classes>
 	</test> <!-- Test -->

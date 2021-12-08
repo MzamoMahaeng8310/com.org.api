@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="APIProject.com.org.api.WebsocketsAutomation">
+      <class name="APIProject.com.org.api.FSPAquisitionPartyGET">
         <methods>
-          <include name="postScriptDeclarations"/>
-          <include name="LEADCALLED"/>
+          <include name="partytypes"/>
           <include name="preconditinDeclarations"/>
+          <include name="postScriptDeclarations"/>
+          <include name="FSPAquisiontGETRequest"/>
         </methods>
-      </class> <!-- APIProject.com.org.api.WebsocketsAutomation -->
+      </class> <!-- APIProject.com.org.api.FSPAquisitionPartyGET -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -32,9 +32,9 @@ public class WebsocketsAutomation {
 	@Test
 	public void GETALLCLIENTS2() throws IOException
 	{
-		BufferedReader reader1 = new BufferedReader(new FileReader("C:\\test\\GETALLCLIENTS2.txt"));
+		BufferedReader reader1 = new BufferedReader(new FileReader("C:\\code\\serverapps\\qa\\getAllClients2Actual.txt"));
 
-		BufferedReader reader2 = new BufferedReader(new FileReader("C:\\test\\GETALLCLIENTS2EXPECTED.txt"));
+		BufferedReader reader2 = new BufferedReader(new FileReader("C:\\code\\serverapps\\qa\\getAllClients2Expected.txt"));
 
 		String line1 = reader1.readLine();
 		String file = reader1.toString();
@@ -75,9 +75,9 @@ public class WebsocketsAutomation {
 		}
 		else
 		{
-		//	System.out.println("Two files have different content. They differ at line "+lineNum);
+			//	System.out.println("Two files have different content. They differ at line "+lineNum);
 			test.log(Status.FAIL,"Two files have different content. They differ at line "+lineNum);
-		//	System.out.println("File1 has "+line1+" and File2 has "+line2+" at line "+lineNum);
+			//	System.out.println("File1 has "+line1+" and File2 has "+line2+" at line "+lineNum);
 			test.log(Status.FAIL, "File1 has "+line1+" and File2 has "+line2+" at line "+lineNum);
 		}
 		File webSockerResponse = new  File("C:\\test\\GETALLCLIENTS2.txt");
@@ -132,16 +132,16 @@ public class WebsocketsAutomation {
 		test = extent.createTest("CHECKSERIAL");
 		if(areEqual)
 		{
-		//	System.out.println("Two files have same content.");
+			//	System.out.println("Two files have same content.");
 			test.log(Status.INFO, file);
 			test.log(Status.PASS, "The files match :" + line1);
 
 		}
 		else
 		{
-		//	System.out.println("Two files have different content. They differ at line "+lineNum);
+			//	System.out.println("Two files have different content. They differ at line "+lineNum);
 			test.log(Status.FAIL,"Two files have different content. They differ at line "+lineNum);
-		//	System.out.println("File1 has "+line1+" and File2 has "+line2+" at line "+lineNum);
+			//	System.out.println("File1 has "+line1+" and File2 has "+line2+" at line "+lineNum);
 			test.log(Status.FAIL, "File1 has "+line1+" and File2 has "+line2+" at line "+lineNum);
 		}
 		File webSockerResponse = new  File("C:\\test\\CHECKSERIAL.txt");
@@ -157,7 +157,6 @@ public class WebsocketsAutomation {
 
 		reader2.close();
 	}
-
 	@Test
 	public void LOGIN() throws IOException
 	{
@@ -206,7 +205,7 @@ public class WebsocketsAutomation {
 		{
 			//System.out.println("Two files have different content. They differ at line "+lineNum);
 			test.log(Status.FAIL,"Two files have different content. They differ at line "+lineNum);
-		//	System.out.println("File1 has "+line1+" and File2 has "+line2+" at line "+lineNum);
+			//	System.out.println("File1 has "+line1+" and File2 has "+line2+" at line "+lineNum);
 			test.log(Status.FAIL, "File1 has "+line1+" and File2 has "+line2+" at line "+lineNum);
 		}
 		File webSockerResponse = new  File("C:\\test\\LOGIN.txt");
@@ -261,16 +260,16 @@ public class WebsocketsAutomation {
 		test = extent.createTest("VERIFYOTP");
 		if(areEqual)
 		{
-		//	System.out.println("Two files have same content.");
+			//	System.out.println("Two files have same content.");
 			test.log(Status.INFO, file);
 			test.log(Status.PASS, "The files match :" + line1);
 
 		}
 		else
 		{
-		//	System.out.println("Two files have different content. They differ at line "+lineNum);
+			//	System.out.println("Two files have different content. They differ at line "+lineNum);
 			test.log(Status.FAIL,"Two files have different content. They differ at line "+lineNum);
-		//	System.out.println("File1 has "+line1+" and File2 has "+line2+" at line "+lineNum);
+			//	System.out.println("File1 has "+line1+" and File2 has "+line2+" at line "+lineNum);
 			test.log(Status.FAIL, "File1 has "+line1+" and File2 has "+line2+" at line "+lineNum);
 		}
 		File webSockerResponse = new  File("C:\\test\\VERIFYOTP.txt");
@@ -334,7 +333,7 @@ public class WebsocketsAutomation {
 		{
 			//System.out.println("Two files have different content. They differ at line "+lineNum);
 			test.log(Status.FAIL,"Two files have different content. They differ at line "+lineNum);
-		//	System.out.println("File1 has "+line1+" and File2 has "+line2+" at line "+lineNum);
+			//	System.out.println("File1 has "+line1+" and File2 has "+line2+" at line "+lineNum);
 			test.log(Status.FAIL, "File1 has "+line1+" and File2 has "+line2+" at line "+lineNum);
 		}
 		File webSockerResponse = new  File("C:\\test\\GETINSTALLER.txt");
