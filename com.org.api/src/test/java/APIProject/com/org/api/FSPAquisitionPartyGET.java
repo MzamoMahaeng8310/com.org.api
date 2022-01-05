@@ -39,7 +39,7 @@ public class FSPAquisitionPartyGET {
 		excelFilePath = ".\\FSPAquisitionPartyData\\FSPAquisitionData.xlsx";
 		inputStream = new FileInputStream(excelFilePath);
 		workbook  = new XSSFWorkbook(inputStream);
-		sheet  = workbook.getSheet("GET");
+		sheet  = workbook.getSheet("GETW");
 	}
 
 	@Test (enabled =true)

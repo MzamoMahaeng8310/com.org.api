@@ -1,3 +1,3 @@
-englishDescriptionVerify=Trust
-partyTypeEndPoint=http://glcapi-ws-tst.sanlam.co.za/fsp/acq/sh/party/api/partytypes
-partyTypeJSONPath=partyTypes[3].englishDescription
+englishDescriptionVerify=US
+partyTypeEndPoint=http://api.openweathermap.org/data/2.5/weather?q=boston&appid=8c8d3215dea188a4db1f105e201e5387
+partyTypeJSONPath=sys.country
