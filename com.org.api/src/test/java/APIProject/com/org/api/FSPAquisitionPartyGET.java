@@ -43,7 +43,7 @@ public class FSPAquisitionPartyGET {
 	}
 
 	@Test (enabled =true)
-	public void FSPAquisiontGETRequest()
+	public void DilivariUsersGet()
 	{
 
 		// using the for loop
@@ -64,19 +64,19 @@ public class FSPAquisitionPartyGET {
 						when().
 						get(url);
 				System.out.println("Get response is :" + resp.asString());
-				test = extent.createTest("FSPAquisionParty_GET Smoke", url);
+				test = extent.createTest("Dilivari Smoke Test", url);
 				test.log(Status.INFO, "Respose :" + resp.asString());
 
 				int codeRespose = resp.getStatusCode();
 				switch(codeRespose)
 				{
 				case 200:
-					test.pass("FSP Aquisiton Party Response Code: " +resp.getStatusCode()+  " Pass");
+					test.pass("Dilivari API Response Code: " +resp.getStatusCode()+  " Pass");
 					break;
 
 				case 404:
 
-					test.pass("FSP Aquisiton Party Response Code: 404  " +resp.getStatusCode()+  " Pass");
+					test.pass("Dilivari API Response Code: 404  " +resp.getStatusCode()+  " Pass");
 					break;
 
 				}
@@ -84,7 +84,7 @@ public class FSPAquisitionPartyGET {
 				if (resp.getStatusCode() != 200 && resp.getStatusCode() !=  404)
 				{
 
-					test.pass("FSP Aquisiton Party Response " + resp.getStatusCode() + " Fail" );
+					test.pass("Dilivari API Response " + resp.getStatusCode() + " Fail" );
 				}
 			}
 
@@ -94,7 +94,7 @@ public class FSPAquisitionPartyGET {
 	}
 
 	@Test(enabled = true)
-	public void partytypes() throws IOException
+	public void VerifyParcelType() throws IOException
 	{
 		File src = new File("./RESTApiConfig/RESTApiConfig.property");
 		FileInputStream fis = new FileInputStream(src);
@@ -112,20 +112,20 @@ public class FSPAquisitionPartyGET {
 				contentType(ContentType.JSON).
 				extract().
 				path(pro.getProperty("partyTypeJSONPath"));
-		System.out.println("partytypes  english description : "+ englishDescription);
-		test = extent.createTest("partytype  response: ", resp.asString());
-		test.log(Status.INFO, "partytype id value :" + englishDescription);
+		System.out.println("Parcel Type description : "+ englishDescription);
+		test = extent.createTest("Parcel Type   response: ", resp.asString());
+		test.log(Status.INFO, "Parel Type Value :" + englishDescription);
 		Assert.assertEquals(englishDescription, englishDescriptionVerify);
 
 		if (englishDescription.equals(englishDescriptionVerify))
 
 		{
 
-			test.log(Status.PASS,"partytype english description : "+  englishDescription + " Matches expected: "+ englishDescriptionVerify);
+			test.log(Status.PASS,"Parcel Type description : "+  englishDescription + " Matches expected: "+ englishDescriptionVerify);
 		}
 		else 
 		{
-			test.log(Status.FAIL, "partytype english description : "+ englishDescription + " Does not match expected descripton : "+ englishDescriptionVerify);
+			test.log(Status.FAIL, "Parcel Type  description : "+ englishDescription + " Does not match expected descripton : "+ englishDescriptionVerify);
 		}
 
 

@@ -1,3 +1,3 @@
-englishDescriptionVerify=US
-partyTypeEndPoint=http://api.openweathermap.org/data/2.5/weather?q=boston&appid=8c8d3215dea188a4db1f105e201e5387
-partyTypeJSONPath=sys.country
+englishDescriptionVerify=ama kipkip
+partyTypeEndPoint=https://sipnetazureservice.azurewebsites.net/delivery/
+partyTypeJSONPath=[0].parcelType
