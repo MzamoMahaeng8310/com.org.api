@@ -6,12 +6,12 @@ public class JSONString {
 
 	public static void main(String[] args) {
 		JSONObject obj = new JSONObject();
-		//		obj.put("action", "LOGIN");
-		//		obj.put("username", "mzamo@quickloc8.co.za");
-		//		obj.put("password", "12D7M@ha3ng");
-		obj.put("cellphone","0794955360");
-		obj.put("password","13234234");
-		obj.put("action","LOGIN");
+		obj.put("action", "LOGIN");
+		obj.put("username", "mzamo@quickloc8.co.za");
+		obj.put("password", "12D7M@ha3ng");
+		//		obj.put("cellphone","0794955360");
+		//		obj.put("password","13234234");
+		//		obj.put("action","LOGIN");
 		//obj.put("cellphone","0813582002");
 		//obj.put("password", "13234234");
 		//obj.put("token", "");
@@ -21,10 +21,10 @@ public class JSONString {
 		// obj.put("reason", "damaged device");
 		String message = obj.toString();
 		System.out.println(message);
-		
-				
 
-		
+
+
+
 	}
 
 }
