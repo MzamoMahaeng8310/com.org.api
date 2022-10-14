@@ -78,7 +78,6 @@ public class FSPAquisitionPartyGET {
 
 					test.pass("Dilivari API Response Code: 404  " +resp.getStatusCode()+  " Pass");
 					break;
-
 				}
 
 				if (resp.getStatusCode() != 200 && resp.getStatusCode() !=  404)
